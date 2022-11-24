@@ -170,4 +170,4 @@ catch (Exception ex)
 
 ---
 
-[Вверх](#anchor "Вернуться вначало")
+:point_right: [Вверх](#anchor "Вернуться вначало")
