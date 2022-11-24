@@ -4,7 +4,7 @@
 
 </center>
 
-<u>***Задача***</u>
+## <u>*Задача*</u>
 
 Написать программу, которая из имеющегося массива строк формирует новый массив из строк, длина которых меньше, либо равна 3 символам.
 
@@ -20,5 +20,11 @@
 [“Russia”, “Denmark”, “Kazan”] → [] */
 
 :point_right: [Перейти к решению](https://github.com/ANT050/Final_verification_work_23.11.2022/blob/main/Final_work/Program.cs "Открыть")
+
+---
+
+## <u>*Блок-Схема*</u>
+
+<img src="Block diagram(Final verification work).jpg" height=600 width="600"/>
 
 ---
