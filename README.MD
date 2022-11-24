@@ -1,3 +1,5 @@
+<a id="anchor"></a>
+
 <center>
 
 # Итоговая проверочная работа первого блока
@@ -92,5 +94,80 @@ string[] ArraySelection(string value)
 	return myArray;
 }
 ```
+- ### Функция вывода выбранного массива в консоли.
+
+```
+void PrintArray(string[] myArray)
+{
+	Console.Write("[");
+	for (int i = 0; i < myArray.Length; i++)
+	{
+		Console.Write($"“{myArray[i]}”");
+		if (i != myArray.Length - 1)
+			Console.Write(", ");
+	}
+	Console.Write("]");
+}
+```
+
+- ### Функция определение размера итогового массива, где элементы массива меньше, либо равны 3 символам
+
+Создается счетчик size. В цикле for находим элементы массива, у которых длина меньше или равна 3. Если условие выполняется, то идет подсчет таких элементов, где на выходе возвращаем size.
+
+```
+int ArraySize(string[] myArray)
+{
+	int size = 0;
+	for (int i = 0; i < myArray.Length; i++)
+	{
+		if (myArray[i].Length <= 3) size++;
+	}
+	return size;
+}
+```
+- ### Функция создание нового массив из строк, длина которых меньше, либо равна 3 символам.
+
+Создается новый массив newArray, вводится переменная index - индекс элемента массива, куда будет записываться элемент массива, соответствующий условию. На выходе возвращается новый массив, который будет удовлетворять условию задачи.
+
+```
+string[] NewArray(int size, string[] myArray)
+{
+	string[] newArray = new string[size];
+	int index = 0;
+
+	for (int i = 0; i < myArray.Length; i++)
+	{
+		if (myArray[i].Length <= 3)
+		{
+			newArray[index] = myArray[i];
+			index++;
+		}
+	}
+	return newArray;
+}
+```
+
+- ### Основной код.
+
+```
+try
+{
+	string value = ArrayNumbers("\nУкажите номер массива: ");
+	string[] myArray = ArraySelection(value);
+	int sizeArray = ArraySize(myArray);
+	string[] newArray = NewArray(sizeArray, myArray);
+	Console.Write($"\n{value} массив: ");
+	PrintArray(myArray);
+	Console.Write(" -> ");
+	PrintArray(newArray);
+	Console.WriteLine();
+}
+catch (Exception ex)
+{
+	Console.WriteLine(ex.Message);
+}
+```
 
 ---
+
+[Вверх](#anchor "Вернуться вначало")
