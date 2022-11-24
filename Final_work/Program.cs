@@ -12,9 +12,38 @@ string ArrayNumbers(string message)
 	return Console.ReadLine();
 }
 
+//Выбор массива
+string[] ArraySelection(string value)
+{
+	string[] myArray = new string[] { };
+	string arrayNumber = value;
+	switch (arrayNumber)
+	{
+		case "1":
+			myArray = new string[] { "hello", "2", "world", ":-)" };
+			break;
+		case "2":
+			myArray = new string[] { "1234", "1567", "-2", "computer science" };
+			break;
+		case "3":
+			myArray = new string[] { "Russia", "Denmark", "Kazan" };
+			break;
+		default:
+			throw new Exception($"\nМассив отсутствует!!!");
+	}
+	return myArray;
+}
+
 Console.WriteLine("\nМАССИВЫ:\n");
 Console.WriteLine("1 массив: [“hello”, “2”, “world”, “:-)”]");
 Console.WriteLine("2 массив: [“1234”, “1567”, “-2”, “computer science”]");
 Console.WriteLine("3 массив: [“Russia”, “Denmark”, “Kazan”]");
 
-string value = ArrayNumbers("\nУкажите номер массива: ");
+try
+{
+	string value = ArrayNumbers("\nУкажите номер массива: ");
+}
+catch (Exception ex)
+{
+	Console.WriteLine(ex.Message);
+}
