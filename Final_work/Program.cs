@@ -47,6 +47,17 @@ void PrintArray(string[] myArray)
 	Console.Write("]");
 }
 
+//Определение размера итогового массива, где элементы массива меньше, либо равны 3 символам
+int ArraySize(string[] myArray)
+{
+	int size = 0;
+	for (int i = 0; i < myArray.Length; i++)
+	{
+		if (myArray[i].Length <= 3) size++;
+	}
+	return size;
+}
+
 Console.WriteLine("\nМАССИВЫ:\n");
 Console.WriteLine("1 массив: [“hello”, “2”, “world”, “:-)”]");
 Console.WriteLine("2 массив: [“1234”, “1567”, “-2”, “computer science”]");
@@ -55,6 +66,8 @@ Console.WriteLine("3 массив: [“Russia”, “Denmark”, “Kazan”]");
 try
 {
 	string value = ArrayNumbers("\nУкажите номер массива: ");
+	string[] myArray = ArraySelection(value);
+	int sizeArray = ArraySize(myArray);
 }
 catch (Exception ex)
 {
