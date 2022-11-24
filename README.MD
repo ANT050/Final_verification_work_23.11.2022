@@ -174,7 +174,7 @@ catch (Exception ex)
 
 <img src="Commit.jpg" height=200 width="200"/>
 
-:point_right: [Открыть блок-схему](https://github.com/ANT050/Final_verification_work_23.11.2022/blob/main/Block%20diagram(Final%20verification%20work).jpg "Открыть")
+:point_right: [Открыть COMMIT](https://github.com/ANT050/Final_verification_work_23.11.2022/blob/main/Commit.jpg "Открыть")
 
 ---
 
