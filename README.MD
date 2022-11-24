@@ -25,6 +25,6 @@
 
 ## <u>*Блок-Схема*</u>
 
-<img src="Block diagram(Final verification work).jpg" height=600 width="600"/>
+<img src="Block diagram(Final verification work).jpg" height=200 width="200"/>
 
 ---
