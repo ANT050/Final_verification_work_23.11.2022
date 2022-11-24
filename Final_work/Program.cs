@@ -58,6 +58,23 @@ int ArraySize(string[] myArray)
 	return size;
 }
 
+// Новый массив из строк, длина которых меньше, либо равна 3 символам
+string[] NewArray(int size, string[] myArray)
+{
+	string[] newArray = new string[size];
+	int index = 0;
+
+	for (int i = 0; i < myArray.Length; i++)
+	{
+		if (myArray[i].Length <= 3)
+		{
+			newArray[index] = myArray[i];
+			index++;
+		}
+	}
+	return newArray;
+}
+
 Console.WriteLine("\nМАССИВЫ:\n");
 Console.WriteLine("1 массив: [“hello”, “2”, “world”, “:-)”]");
 Console.WriteLine("2 массив: [“1234”, “1567”, “-2”, “computer science”]");
@@ -68,6 +85,12 @@ try
 	string value = ArrayNumbers("\nУкажите номер массива: ");
 	string[] myArray = ArraySelection(value);
 	int sizeArray = ArraySize(myArray);
+	string[] newArray = NewArray(sizeArray, myArray);
+	Console.Write($"\n{value} массив: ");
+	PrintArray(myArray);
+	Console.Write(" -> ");
+	PrintArray(newArray);
+	Console.WriteLine();
 }
 catch (Exception ex)
 {
