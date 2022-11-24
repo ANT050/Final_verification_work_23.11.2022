@@ -167,8 +167,15 @@ catch (Exception ex)
 	Console.WriteLine(ex.Message);
 }
 ```
+- ### Результат.
+
+<img src="result.jpg" height=200 width="200"/>
+
+:point_right: [Открыть Результат](https://github.com/ANT050/Final_verification_work_23.11.2022/blob/main/Commit.jpg "Открыть")
 
 ---
+
+
 
 ## <u>*4. Commit*</u>
 
