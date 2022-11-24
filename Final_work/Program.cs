@@ -34,6 +34,19 @@ string[] ArraySelection(string value)
 	return myArray;
 }
 
+//Вывод выбранного массива в консоли
+void PrintArray(string[] myArray)
+{
+	Console.Write("[");
+	for (int i = 0; i < myArray.Length; i++)
+	{
+		Console.Write($"“{myArray[i]}”");
+		if (i != myArray.Length - 1)
+			Console.Write(", ");
+	}
+	Console.Write("]");
+}
+
 Console.WriteLine("\nМАССИВЫ:\n");
 Console.WriteLine("1 массив: [“hello”, “2”, “world”, “:-)”]");
 Console.WriteLine("2 массив: [“1234”, “1567”, “-2”, “computer science”]");
